@@ -32,6 +32,8 @@ public class StepView extends View {
     private Paint mTextpaint;
     private int currentStep;
 
+    private Context mContext;
+
 
     public StepView(Context context) {
         this(context, null);
@@ -44,6 +46,7 @@ public class StepView extends View {
 
     public StepView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        mContext = context;
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.StepView);
         mOuterColor = array.getColor(R.styleable.StepView_outer_color, context.getResources().getColor(R.color.purple_700));
         mInnerColor = array.getColor(R.styleable.StepView_inner_color, context.getResources().getColor(R.color.purple_200));
@@ -81,8 +84,8 @@ public class StepView extends View {
         int wMode = MeasureSpec.getMode(widthMeasureSpec);
         int hMode = MeasureSpec.getMode(heightMeasureSpec);
         if (wMode == MeasureSpec.AT_MOST || hMode == MeasureSpec.AT_MOST) {
-            width = 40;
-            height = 40;
+            width = BaseUtils.sp2px(mContext,200);
+            height = width;
         }
         setMeasuredDimension(Math.min(width, height), Math.min(width, height));
     }
