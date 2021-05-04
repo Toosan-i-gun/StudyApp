@@ -7,12 +7,23 @@
     android:orientation="vertical">
 
     <com.company.studyapp.view.MyTextView
-        android:background="#50000000"
-        app:my_text="自定义View"
-        app:my_textSize="20sp"
-        android:padding="8dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:background="#50000000"
+        android:padding="8dp"
+        android:visibility="gone"
+        app:my_text="自定义View"
+        app:my_textColor="@color/purple_500"
+        app:my_textSize="20sp" />
+
+    <com.company.studyapp.view.StepView
+        android:id="@+id/step_view"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:text_content="8000"
+        app:text_color="@color/purple_500"
+        app:border_width="20dp"
+        app:text_size="30sp" />
 
 
 </LinearLayout>

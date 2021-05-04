@@ -24,7 +24,7 @@ import com.company.studyapp.utils.BaseUtils;
  * 前两个调this,最后一个调super
  * 保证最后都调到第三个方便管理
  */
-class MyTextView extends View {
+public class MyTextView extends View {
     private static final String TAG = "MyTextView";
 
     private String mTextStr;

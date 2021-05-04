@@ -3,17 +3,26 @@
     <!--自定义view的自定义属性 name一般用自定义View的名称-->
     <declare-styleable name="MyTextView">
         <!--自定的属性-->
-        <attr name="my_text" format="string"/>
-        <attr name="my_textColor" format="color"/>
+        <attr name="my_text" format="string" />
+        <attr name="my_textColor" format="color" />
         <!--背景可以引用资源或者使用颜色-->
-        <attr name="my_background" format="reference|color"/>
-        <attr name="my_textSize" format="dimension"/>
-        <attr name="my_maxLines" format="integer"/>
+        <attr name="my_background" format="reference|color" />
+        <attr name="my_textSize" format="dimension" />
+        <attr name="my_maxLines" format="integer" />
         <!--枚举-->
         <attr name="my_inputType">
-            <enum name="number" value="1"/>
-            <enum name="text" value="2"/>
-            <enum name="password" value="3"/>
+            <enum name="number" value="1" />
+            <enum name="text" value="2" />
+            <enum name="password" value="3" />
         </attr>
+    </declare-styleable>
+
+    <declare-styleable name="StepView">
+        <attr name="outer_color" format="color"/>
+        <attr name="inner_color" format="color"/>
+        <attr name="border_width" format="dimension"/>
+        <attr name="text_size" format="dimension"/>
+        <attr name="text_color" format="color"/>
+        <attr name="text_content" format="string"/>
     </declare-styleable>
 </resources>
