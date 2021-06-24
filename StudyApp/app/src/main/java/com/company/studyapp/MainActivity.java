@@ -18,20 +18,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        initStepView();
-       initMoveRect();
+        initStepView();
     }
 
-    private void initMoveRect() {
-        MoveRectView rectView = findViewById(R.id.move_rect);
-        rectView.setRect(100,200,300,400);
-        new Handler(getMainLooper()).postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                rectView.setRect(200,300,400,500);
-            }
-        },2000);
-    }
+
 
     private void initStepView() {
         StepView stepView = findViewById(R.id.step_view);
@@ -39,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         // 设置动画 ofFloat 动画变动区间
         ValueAnimator animator = ValueAnimator.ofFloat(0,5000);
         // 动画从开始到结束的时间
-        animator.setDuration(5000);
+        animator.setDuration(1500);
         // 不断获取变化区间改变时的值
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
